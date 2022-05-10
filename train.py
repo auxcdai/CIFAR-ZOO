@@ -165,7 +165,7 @@ def main():
 
     # read config from yaml file
     with open(args.work_path + "/config.yaml") as f:
-        config = yaml.load(f)
+        config = yaml.load(f, Loader=yaml.FullLoader)
     # convert to dict
     config = EasyDict(config)
     logger.info(config)
